@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d lib",
-    "start": "node lib/index.js"
+    "start": "node lib/index.js",
+    "watch": "nodemon --exec \"npm run build && node lib/index.js\" -e js --ignore lib/"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "@babel/core": "^7.17.5",
     "@babel/plugin-proposal-decorators": "^7.17.2",
     "@babel/preset-env": "^7.16.11"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.15"
   }
 }
